@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest",
+  "name": "AxelBase JWT Checker",
+  "short_name": "JWT Checker",
+  "description": "Privacy-first JWT iat & exp checker. No data sent. 100% client-side.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#1abc9c",
+  "icons": [
+    {
+      "src": "AxelLab-Logo.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

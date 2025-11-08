@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AxelBase – JWT Expiry and Issued-At Checker</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="../../_app/immutable/assets/0.tn0RQdqM.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/6.D9NvPkdf.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BhYHJnkG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BU90hgs4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TclhMj-f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DCZQANaK.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DhPEI8C9.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CmUmXQcf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C9I-fwtZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/D6UAHUuG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DYD4b0x7.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/mgrTsNBi.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.C0MN02Sb.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cs9GcjWm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/SjsDgpp3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DcKmjBIS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BVk5QTsZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/6.2M-U3dIt.js"><!--12qhfyh--><meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="description" content="Privacy-first JWT iat &amp; exp checker. No data sent. 100% client-side."/> <meta name="theme-color" content="#1abc9c"/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="icon" href="../../AxelLab-Logo.ico" type="image/x-icon"/> <link rel="manifest" href="../../manifest.json"/> <link rel="stylesheet" href="../../bootstrap.min.css"/> <link rel="stylesheet" href="../../app.css"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/"/> <meta property="og:image" content="../../og-image.jpg"/> <meta property="og:image:width" content="1200"/> <meta property="og:image:height" content="630"/> <meta name="twitter:image" content="../../og-image.jpg"/> <meta name="twitter:card" content="summary_large_image"/> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AxelBase JWT Checker",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://axelbase.github.io/jwt-checker/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AxelBase",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "logo": "https://axelbase.github.io/jwt-checker/AxelLab-Logo.ico",
+    "sameAs": ["https://github.com/axelbase/jwt-checker"],
+    "description": "Privacy-first JWT tools. No data sent. 100% client-side."
+  }
+  </script><!----><!--1al8b51--><meta name="description" content="Deep dive into JWT iat and exp claims: how they work, why they matter, and how to validate them securely."/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/blog/posts/post3"/> <meta property="og:title" content="Decoding iat &amp; exp: What They Really Mean | AxelBase"/> <meta property="og:description" content="Understand issued-at and expiration claims with real examples and security insights."/> <meta property="og:url" content="https://axelbase.github.io/jwt-checker/blog/posts/post3"/> <meta property="og:type" content="article"/> <meta property="article:published_time" content="2025-11-08"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Decoding iat &amp; exp: What They Really Mean"/> <meta name="twitter:description" content="Master JWT time claims for secure authentication."/> <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Decoding iat & exp: What They Really Mean",
+  "datePublished": "2025-11-08",
+  "author": { "@type": "Organization", "name": "AxelBase" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AxelBase",
+    "logo": { "@type": "ImageObject", "url": "{base}/AxelLab-Logo.ico" }
+  },
+  "image": "{base}/og-image.jpg",
+  "url": "https://axelbase.github.io/jwt-checker/blog/posts/post3",
+  "description": "Deep dive into JWT iat and exp claims: how they work, why they matter, and how to validate them securely."
+}
+</script><!----><title>Decoding iat &amp; exp: What They Really Mean | AxelBase</title>
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="navbar-container" aria-label="Main navigation"><div class="navbar-brand-group"><a href="../../" class="navbar-brand-link" aria-label="AxelBase Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo" width="32" height="32"/></a> <a href="../../" class="navbar-brand text-turquoise fw-bold">AxelBase</a></div> <ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to Use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li> <li class="bmac-nav-item"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout svelte-1al8b51"><div class="breadcrumbs svelte-1al8b51"><a href="../../" class="svelte-1al8b51">Home</a> <span>/</span> <a href="../../blog" class="svelte-1al8b51">Blog</a> <span>/</span> <p class="svelte-1al8b51">iat &amp; exp Explained</p></div> <article class="prose svelte-1al8b51"><h1 class="svelte-1al8b51">Decoding iat &amp; exp: What They Really Mean</h1> <p class="post-meta svelte-1al8b51">Published: November 8, 2025</p> <p>The <code class="svelte-1al8b51">iat</code> (issued at) and <code class="svelte-1al8b51">exp</code> (expiration) claims are the <strong>temporal backbone</strong> of any JWT. While often overlooked, they are critical for security, auditing, and user experience.</p> <h2 class="svelte-1al8b51">The iat Claim: When Was This Token Born?</h2> <p>The <code class="svelte-1al8b51">iat</code> claim is a Unix timestamp (seconds since epoch) indicating when the token was issued.</p> <p>Example: <code class="svelte-1al8b51">"iat": 1733683200</code> → <strong>2025-11-08 12:00:00 UTC</strong></p> <h3>Why iat Matters</h3> <ul class="svelte-1al8b51"><li class="svelte-1al8b51"><strong>Replay attack prevention</strong>: Reject tokens issued before a known compromise</li> <li class="svelte-1al8b51"><strong>Auditing</strong>: Know exactly when a user logged in</li> <li class="svelte-1al8b51"><strong>Clock drift detection</strong>: Compare with server time</li></ul> <h2 class="svelte-1al8b51">The exp Claim: When Does Access End?</h2> <p>The <code class="svelte-1al8b51">exp</code> claim defines the exact moment a token becomes invalid.</p> <p>Example: <code class="svelte-1al8b51">"exp": 1733686800</code> → <strong>2025-11-08 13:00:00 UTC</strong></p> <h3>Critical Validation Rules</h3> <div class="validation-rules svelte-1al8b51" role="list" aria-label="Critical validation rules for tokens"><div class="rule svelte-1al8b51" role="listitem"><div class="condition svelte-1al8b51"><code class="svelte-1al8b51">current_time >= exp</code></div> <div class="arrow svelte-1al8b51">→</div> <div class="status reject svelte-1al8b51"><strong>Reject</strong></div></div> <div class="rule svelte-1al8b51" role="listitem"><div class="condition svelte-1al8b51"><code class="svelte-1al8b51">current_time &lt; iat</code></div> <div class="arrow svelte-1al8b51">→</div> <div class="status warn svelte-1al8b51"><strong>Future token</strong> (possible spoofing)</div></div> <div class="rule svelte-1al8b51" role="listitem"><div class="condition svelte-1al8b51"><code class="svelte-1al8b51">exp - iat > 24 hours</code></div> <div class="arrow svelte-1al8b51">→</div> <div class="status warn svelte-1al8b51"><strong>Too long</strong></div></div></div> <h2 class="svelte-1al8b51">Real-World Example</h2> <p>A banking app issues a JWT with:</p> <ul class="svelte-1al8b51"><li class="svelte-1al8b51"><code class="svelte-1al8b51">iat: now</code></li> <li class="svelte-1al8b51"><code class="svelte-1al8b51">exp: now + 15 minutes</code></li></ul> <p>After 16 minutes, the token is rejected — even if the user is active. This forces re-authentication for sensitive actions.</p> <h2 class="svelte-1al8b51">Test Your Tokens</h2> <p>Use our <a href="../../" class="text-turquoise fw-semibold svelte-1al8b51">JWT Checker Tool</a> to:</p> <ul class="svelte-1al8b51"><li class="svelte-1al8b51">See <code class="svelte-1al8b51">iat</code> and <code class="svelte-1al8b51">exp</code> in human-readable format</li> <li class="svelte-1al8b51">Get instant validity status</li> <li class="svelte-1al8b51">Copy decoded payload for debugging</li></ul> <p>All in-browser. Zero trust. Full control.</p> <p class="italic-note svelte-1al8b51">Time is security. Master iat and exp — master JWT safety.</p> <p class="mt-5"><a href="../../" class="btn btn-outline-turquoise">Inspect iat &amp; exp Now</a> <a href="../../blog/posts/post1" class="btn btn-link text-turquoise ms-3 svelte-1al8b51">Back to JWT 101</a></p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container text-center"><p class="mb-0">© 2025 <strong>AxelBase JWT Checker</strong> — <a href="../../privacy" class="footer-link">Privacy Policy</a> | <a href="../../terms" class="footer-link">Terms &amp; Conditions</a></p></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1qxawfz = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/jwt-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BhYHJnkG.js"),
+						import("../../_app/immutable/entry/app.CmUmXQcf.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

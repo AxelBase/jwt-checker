@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AxelBase – JWT Expiry and Issued-At Checker</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="../../_app/immutable/assets/0.tn0RQdqM.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/10.DTPqd6Co.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BhYHJnkG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BU90hgs4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TclhMj-f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DCZQANaK.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DhPEI8C9.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CmUmXQcf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C9I-fwtZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/D6UAHUuG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DYD4b0x7.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/mgrTsNBi.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.C0MN02Sb.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cs9GcjWm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/SjsDgpp3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DcKmjBIS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BVk5QTsZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.gvdib-w4.js"><!--12qhfyh--><meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="description" content="Privacy-first JWT iat &amp; exp checker. No data sent. 100% client-side."/> <meta name="theme-color" content="#1abc9c"/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="icon" href="../../AxelLab-Logo.ico" type="image/x-icon"/> <link rel="manifest" href="../../manifest.json"/> <link rel="stylesheet" href="../../bootstrap.min.css"/> <link rel="stylesheet" href="../../app.css"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/"/> <meta property="og:image" content="../../og-image.jpg"/> <meta property="og:image:width" content="1200"/> <meta property="og:image:height" content="630"/> <meta name="twitter:image" content="../../og-image.jpg"/> <meta name="twitter:card" content="summary_large_image"/> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AxelBase JWT Checker",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://axelbase.github.io/jwt-checker/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AxelBase",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "logo": "https://axelbase.github.io/jwt-checker/AxelLab-Logo.ico",
+    "sameAs": ["https://github.com/axelbase/jwt-checker"],
+    "description": "Privacy-first JWT tools. No data sent. 100% client-side."
+  }
+  </script><!----><!--jo8es1--><meta name="description" content="Explore zero-knowledge design: how AxelBase processes JWTs entirely in your browser with no data transmission."/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/blog/posts/post7"/> <meta property="og:title" content="Privacy-First Tools: Why AxelBase Never Sends Your Token | AxelBase"/> <meta property="og:description" content="A deep dive into client-side processing and why it’s the future of secure dev tools."/> <meta property="og:url" content="https://axelbase.github.io/jwt-checker/blog/posts/post7"/> <meta property="og:type" content="article"/> <meta property="article:published_time" content="2025-11-08"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Why AxelBase Never Sends Your JWT"/> <meta name="twitter:description" content="Zero-knowledge JWT inspection — 100% in your browser."/> <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Privacy-First Tools: Why AxelBase Never Sends Your Token",
+  "datePublished": "2025-11-08",
+  "author": { "@type": "Organization", "name": "AxelBase" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AxelBase",
+    "logo": { "@type": "ImageObject", "url": "{base}/AxelLab-Logo.ico" }
+  },
+  "image": "{base}/og-image.jpg",
+  "url": "https://axelbase.github.io/jwt-checker/blog/posts/post7",
+  "description": "Explore zero-knowledge design: how AxelBase processes JWTs entirely in your browser with no data transmission."
+}
+</script><!----><title>Privacy-First Tools: Why AxelBase Never Sends Your Token | AxelBase</title>
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="navbar-container" aria-label="Main navigation"><div class="navbar-brand-group"><a href="../../" class="navbar-brand-link" aria-label="AxelBase Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo" width="32" height="32"/></a> <a href="../../" class="navbar-brand text-turquoise fw-bold">AxelBase</a></div> <ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to Use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li> <li class="bmac-nav-item"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout svelte-jo8es1"><div class="breadcrumbs svelte-jo8es1"><a href="../../" class="svelte-jo8es1">Home</a> <span>/</span> <a href="../../blog" class="svelte-jo8es1">Blog</a> <span>/</span> <p class="svelte-jo8es1">Privacy-First Design</p></div> <article class="prose svelte-jo8es1"><h1 class="svelte-jo8es1">Privacy-First Tools: Why AxelBase Never Sends Your Token</h1> <p class="post-meta svelte-jo8es1">Published: November 8, 2025</p> <p>You paste a JWT. You expect it to be decoded. But where does it go? With most online tools — <strong>to their server</strong>. With AxelBase — <strong>nowhere</strong>.</p> <p>Welcome to <strong>zero-knowledge web apps</strong>.</p> <h2 class="svelte-jo8es1">How It Works</h2> <p>When you use <a href="../../" class="text-turquoise fw-semibold svelte-jo8es1">AxelBase JWT Checker</a>:</p> <ul class="svelte-jo8es1"><li class="svelte-jo8es1">All decoding happens in your browser</li> <li class="svelte-jo8es1">Base64 → JSON → DOM updates</li> <li class="svelte-jo8es1">No <code class="svelte-jo8es1">fetch()</code>, no beacons, no logs</li> <li class="svelte-jo8es1">Works offline</li></ul> <p>Open DevTools → Network tab → paste a token → <strong>zero requests</strong>.</p> <h2 class="svelte-jo8es1">Why This Matters</h2> <p>JWTs often contain:</p> <ul class="svelte-jo8es1"><li class="svelte-jo8es1">User IDs</li> <li class="svelte-jo8es1">Email addresses</li> <li class="svelte-jo8es1">Roles and permissions</li> <li class="svelte-jo8es1">Session metadata</li></ul> <p>Sending this to a third party — even encrypted — is a privacy risk.</p> <h2 class="svelte-jo8es1">Zero-Knowledge = Trustless</h2> <p>You don’t need to trust us. The code is open. The logic is transparent. Your data never leaves your machine.</p> <h2 class="svelte-jo8es1">Technical Implementation</h2> <ul class="svelte-jo8es1"><li class="svelte-jo8es1"><strong>SvelteKit</strong>: Static adapter → pure HTML/JS</li> <li class="svelte-jo8es1"><strong>No backend</strong>: No API routes, no database</li> <li class="svelte-jo8es1"><strong>Client-side only</strong>: All logic in <code class="svelte-jo8es1">jwtParser.ts</code></li> <li class="svelte-jo8es1"><strong>Prerendered</strong>: Fast, SEO-friendly, CDN-ready</li></ul> <h2 class="svelte-jo8es1">Use Cases</h2> <p>Perfect for:</p> <ul class="svelte-jo8es1"><li class="svelte-jo8es1">Inspecting production tokens</li> <li class="svelte-jo8es1">Compliance audits</li> <li class="svelte-jo8es1">Security training</li> <li class="svelte-jo8es1">Offline debugging</li></ul> <h2 class="svelte-jo8es1">Join the Movement</h2> <p>Privacy isn’t a feature — it’s a requirement. AxelBase is open source. Fork it. Audit it. Improve it.</p> <p><a href="https://github.com/axelbase/jwt-checker" target="_blank" rel="noopener" class="text-turquoise fw-semibold svelte-jo8es1">GitHub</a></p> <p class="italic-note svelte-jo8es1">Your data. Your browser. Your control.</p> <p class="mt-5"><a href="../../" class="btn btn-outline-turquoise">Try AxelBase Now</a> <a href="../../privacy" class="btn btn-link text-turquoise ms-3 svelte-jo8es1">Read Privacy Policy</a></p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container text-center"><p class="mb-0">© 2025 <strong>AxelBase JWT Checker</strong> — <a href="../../privacy" class="footer-link">Privacy Policy</a> | <a href="../../terms" class="footer-link">Terms &amp; Conditions</a></p></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1qxawfz = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/jwt-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BhYHJnkG.js"),
+						import("../../_app/immutable/entry/app.CmUmXQcf.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 10],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

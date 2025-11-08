@@ -1,0 +1,14 @@
+# AxelBase JWT Checker – robots.txt
+# https://axelbase.github.io/jwt-checker/
+# GSC-Optimized: Allow all, submit sitemap
+
+User-agent: *
+Allow: /
+
+# Sitemap location (critical for GSC)
+Sitemap: https://axelbase.github.io/jwt-checker/sitemap.xml
+
+# Optional: Prevent duplicate content (not needed for GitHub Pages)
+# Disallow: /_app/
+# Disallow: /*.css
+# Disallow: /*.js

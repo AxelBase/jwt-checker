@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AxelBase – JWT Expiry and Issued-At Checker</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="../../_app/immutable/assets/0.tn0RQdqM.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/8.4tZtETkE.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BhYHJnkG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BU90hgs4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TclhMj-f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DCZQANaK.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DhPEI8C9.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CmUmXQcf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C9I-fwtZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/D6UAHUuG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DYD4b0x7.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/mgrTsNBi.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.C0MN02Sb.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cs9GcjWm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/SjsDgpp3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DcKmjBIS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BVk5QTsZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/8.CL8a0lCD.js"><!--12qhfyh--><meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="description" content="Privacy-first JWT iat &amp; exp checker. No data sent. 100% client-side."/> <meta name="theme-color" content="#1abc9c"/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="icon" href="../../AxelLab-Logo.ico" type="image/x-icon"/> <link rel="manifest" href="../../manifest.json"/> <link rel="stylesheet" href="../../bootstrap.min.css"/> <link rel="stylesheet" href="../../app.css"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/"/> <meta property="og:image" content="../../og-image.jpg"/> <meta property="og:image:width" content="1200"/> <meta property="og:image:height" content="630"/> <meta name="twitter:image" content="../../og-image.jpg"/> <meta name="twitter:card" content="summary_large_image"/> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AxelBase JWT Checker",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://axelbase.github.io/jwt-checker/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AxelBase",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "logo": "https://axelbase.github.io/jwt-checker/AxelLab-Logo.ico",
+    "sameAs": ["https://github.com/axelbase/jwt-checker"],
+    "description": "Privacy-first JWT tools. No data sent. 100% client-side."
+  }
+  </script><!----><!--1li990r--><meta name="description" content="Learn 3 easy ways to create valid, expired, or future-dated JWTs for testing — no server required."/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/blog/posts/post5"/> <meta property="og:title" content="How to Generate Test JWTs (Without a Backend) | AxelBase"/> <meta property="og:description" content="Step-by-step guide to crafting JWTs for development and debugging."/> <meta property="og:url" content="https://axelbase.github.io/jwt-checker/blog/posts/post5"/> <meta property="og:type" content="article"/> <meta property="article:published_time" content="2025-11-08"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Generate Test JWTs – No Backend"/> <meta name="twitter:description" content="Create valid, expired, or future tokens instantly."/> <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Generate Test JWTs (Without a Backend)",
+  "datePublished": "2025-11-08",
+  "author": { "@type": "Organization", "name": "AxelBase" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AxelBase",
+    "logo": { "@type": "ImageObject", "url": "{base}/AxelLab-Logo.ico" }
+  },
+  "image": "{base}/og-image.jpg",
+  "url": "https://axelbase.github.io/jwt-checker/blog/posts/post5",
+  "description": "Learn 3 easy ways to create valid, expired, or future-dated JWTs for testing — no server required."
+}
+</script><!----><title>How to Generate Test JWTs (Without a Backend) | AxelBase</title>
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="navbar-container" aria-label="Main navigation"><div class="navbar-brand-group"><a href="../../" class="navbar-brand-link" aria-label="AxelBase Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo" width="32" height="32"/></a> <a href="../../" class="navbar-brand text-turquoise fw-bold">AxelBase</a></div> <ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to Use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li> <li class="bmac-nav-item"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout svelte-1li990r"><div class="breadcrumbs svelte-1li990r"><a href="../../" class="svelte-1li990r">Home</a> <span>/</span> <a href="../../blog" class="svelte-1li990r">Blog</a> <span>/</span> <p class="svelte-1li990r">Generate Test JWTs</p></div> <article class="prose svelte-1li990r"><h1 class="svelte-1li990r">How to Generate Test JWTs (Without a Backend)</h1> <p class="post-meta svelte-1li990r">Published: November 8, 2025</p> <p>Need a valid JWT for testing? Don’t spin up a Node.js server. Don’t hardcode secrets. Here are <strong>three zero-setup methods</strong> to generate tokens instantly.</p> <h2 class="svelte-1li990r">Method 1: Online JWT Generators (Use with Caution)</h2> <p>Tools like <a href="https://jwt.io" target="_blank" rel="noopener" class="text-turquoise svelte-1li990r">jwt.io</a> let you:</p> <ul class="svelte-1li990r"><li class="svelte-1li990r">Edit header and payload</li> <li class="svelte-1li990r">Set <code class="svelte-1li990r">iat</code> and <code class="svelte-1li990r">exp</code></li> <li class="svelte-1li990r">Sign with HS256 (use <code class="svelte-1li990r">secret</code> as key)</li></ul> <p><strong>Warning</strong>: Never paste real tokens. Use dummy data.</p> <h2 class="svelte-1li990r">Method 2: Browser Console (100% Local)</h2> <p>Open DevTools and run:</p> <pre class="svelte-1li990r"><code class="svelte-1li990r">function makeJwt(claims) {
+  const header = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }))
+    .replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  const payload = btoa(JSON.stringify(claims))
+    .replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  return `${header}.${payload}.sig`;
+}
+
+// Valid (expires in 1 hour)
+console.log(makeJwt({
+  sub: "test",
+  iat: Math.floor(Date.now()/1000),
+  exp: Math.floor(Date.now()/1000) + 3600
+}));</code></pre> <p>Copy the output → paste into <a href="../../" class="text-turquoise fw-semibold svelte-1li990r">AxelBase Checker</a>.</p> <h2 class="svelte-1li990r">Method 3: AxelBase + Copy Re-encode</h2> <p>The smartest way:</p> <ol><li>Paste any JWT into <a href="../../" class="text-turquoise fw-semibold svelte-1li990r">AxelBase</a></li> <li>Edit the decoded payload (e.g., change <code class="svelte-1li990r">exp</code>)</li> <li>Click <strong>“Copy Re-encoded JWT”</strong></li> <li>Use the new token instantly</li></ol> <p>No external tools. No risk. Full control.</p> <h2 class="svelte-1li990r">Pre-Made Test Tokens</h2> <p>Here are three ready-to-use examples:</p> <ul class="svelte-1li990r"><li class="svelte-1li990r"><strong>Valid</strong>: <code class="svelte-1li990r">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjI1NjAwMDAsImV4cCI6MTc2MjU2MzYwMH0.sig</code></li> <li class="svelte-1li990r"><strong>Expired</strong>: <code class="svelte-1li990r">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzM2ODMyMDAsImV4cCI6MTczMzY4NjgwMH0.sig</code></li> <li class="svelte-1li990r"><strong>Future</strong>: <code class="svelte-1li990r">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3OTk5OTk5OTksImV4cCI6MTgwMDAwMDAwMH0.sig</code></li></ul> <p>Paste any into our tool — see the status change live.</p> <h2 class="svelte-1li990r">Pro Tip</h2> <p>Use <code class="svelte-1li990r">iat: now - 600</code> and <code class="svelte-1li990r">exp: now + 3600</code> for realistic testing.</p> <p class="italic-note svelte-1li990r">Test fast. Stay secure. No backend needed.</p> <p class="mt-5"><a href="../../" class="btn btn-outline-turquoise">Generate Test Token Now</a> <a href="../../blog/posts/post6" class="btn btn-link text-turquoise ms-3 svelte-1li990r">Next: Common JWT Mistakes</a></p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container text-center"><p class="mb-0">© 2025 <strong>AxelBase JWT Checker</strong> — <a href="../../privacy" class="footer-link">Privacy Policy</a> | <a href="../../terms" class="footer-link">Terms &amp; Conditions</a></p></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1qxawfz = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/jwt-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BhYHJnkG.js"),
+						import("../../_app/immutable/entry/app.CmUmXQcf.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

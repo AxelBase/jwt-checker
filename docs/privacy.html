@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AxelBase – JWT Expiry and Issued-At Checker</title>
+		<link rel="icon" href="./AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="./_app/immutable/assets/0.tn0RQdqM.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/11.CfHPONjZ.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BhYHJnkG.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BU90hgs4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/TclhMj-f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DCZQANaK.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DhPEI8C9.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CmUmXQcf.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C9I-fwtZ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D6UAHUuG.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DYD4b0x7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/mgrTsNBi.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.C0MN02Sb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Cs9GcjWm.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/SjsDgpp3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DcKmjBIS.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BVk5QTsZ.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/11.CTbVEwQL.js"><!--12qhfyh--><meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta name="description" content="Privacy-first JWT iat &amp; exp checker. No data sent. 100% client-side."/> <meta name="theme-color" content="#1abc9c"/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="icon" href="./AxelLab-Logo.ico" type="image/x-icon"/> <link rel="manifest" href="./manifest.json"/> <link rel="stylesheet" href="./bootstrap.min.css"/> <link rel="stylesheet" href="./app.css"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/"/> <meta property="og:image" content="./og-image.jpg"/> <meta property="og:image:width" content="1200"/> <meta property="og:image:height" content="630"/> <meta name="twitter:image" content="./og-image.jpg"/> <meta name="twitter:card" content="summary_large_image"/> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AxelBase JWT Checker",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://axelbase.github.io/jwt-checker/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AxelBase",
+    "url": "https://axelbase.github.io/jwt-checker/",
+    "logo": "https://axelbase.github.io/jwt-checker/AxelLab-Logo.ico",
+    "sameAs": ["https://github.com/axelbase/jwt-checker"],
+    "description": "Privacy-first JWT tools. No data sent. 100% client-side."
+  }
+  </script><!----><!--7ke6fz--><meta name="description" content="AxelBase processes all JWTs 100% client-side. No data is sent, logged, or stored. Zero tracking. Full privacy by design."/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/privacy.html"/> <meta property="og:title" content="Privacy Policy | AxelBase JWT Checker"/> <meta property="og:description" content="No servers. No logs. Your JWT never leaves your browser."/> <meta property="og:url" content="https://axelbase.github.io/jwt-checker/privacy.html"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Privacy Policy | AxelBase"/> <meta name="twitter:description" content="100% client-side JWT checker. Zero data transmission."/><!----><title>Privacy Policy | AxelBase JWT Checker</title>
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="navbar-container" aria-label="Main navigation"><div class="navbar-brand-group"><a href="./" class="navbar-brand-link" aria-label="AxelBase Home"><img src="./AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo" width="32" height="32"/></a> <a href="./" class="navbar-brand text-turquoise fw-bold">AxelBase</a></div> <ul class="nav-links"><li><a class="nav-link" href="./">Home</a></li> <li><a class="nav-link" href="./#about">About</a></li> <li><a class="nav-link" href="./#how-to">How to Use</a></li> <li><a class="nav-link" href="./#faq">FAQ</a></li> <li><a class="nav-link" href="./blog">Blog</a></li> <li class="bmac-nav-item"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></li></ul></nav></header> <main><!--[--><!----><div class="container fade-in post-layout svelte-7ke6fz"><div class="breadcrumbs svelte-7ke6fz"><a href="./" class="svelte-7ke6fz">Home</a> <span>/</span> <p class="svelte-7ke6fz">Privacy Policy</p></div> <article class="prose svelte-7ke6fz"><h1 class="svelte-7ke6fz">Privacy Policy</h1> <p class="post-meta svelte-7ke6fz">Effective Date: November 8, 2025</p> <p>At <strong>AxelBase</strong>, your privacy is not a feature — it’s the foundation. The <strong>JWT Checker</strong> is a <em>zero-knowledge web tool</em> that processes <strong>all data exclusively in your browser</strong>. We do not collect, store, transmit, or log any information — ever.</p> <h2 class="svelte-7ke6fz">1. What We Do NOT Collect</h2> <p>This tool is engineered for <strong>absolute data isolation</strong>. We never receive:</p> <ul class="svelte-7ke6fz"><li class="svelte-7ke6fz"><strong>JWT Tokens</strong>: Any token you paste is decoded using <code class="svelte-7ke6fz">atob()</code> and <code class="svelte-7ke6fz">JSON.parse()</code> — entirely on your device.</li> <li class="svelte-7ke6fz"><strong>Personal Data</strong>: No names, emails, IP addresses, or device identifiers.</li> <li class="svelte-7ke6fz"><strong>Usage Analytics</strong>: No Google Analytics, no cookies, no pixels, no beacons.</li> <li class="svelte-7ke6fz"><strong>Network Requests</strong>: Open DevTools → Network tab → paste a token → <strong>zero outgoing traffic</strong>.</li></ul> <h2 class="svelte-7ke6fz">2. How the Tool Works (Client-Side Only)</h2> <p>When you use the JWT Checker:</p> <ul class="svelte-7ke6fz"><li class="svelte-7ke6fz"><strong>Input</strong>: You paste a JWT into a <code class="svelte-7ke6fz">&lt;textarea></code>.</li> <li class="svelte-7ke6fz"><strong>Processing</strong>: JavaScript splits the token, base64-decodes the payload, and parses <code class="svelte-7ke6fz">iat</code> and <code class="svelte-7ke6fz">exp</code> — all in memory.</li> <li class="svelte-7ke6fz"><strong>Output</strong>: Results are rendered directly in the DOM. No <code class="svelte-7ke6fz">fetch()</code>, no WebSocket, no storage.</li> <li class="svelte-7ke6fz"><strong>Export</strong>: “Copy Re-encoded JWT” uses <code class="svelte-7ke6fz">navigator.clipboard</code> — still local.</li></ul> <p><em>Your browser is the server.</em></p> <h2 class="svelte-7ke6fz">3. No Third-Party Services</h2> <p>We do not integrate with:</p> <ul class="svelte-7ke6fz"><li class="svelte-7ke6fz">Analytics platforms</li> <li class="svelte-7ke6fz">Advertising networks</li> <li class="svelte-7ke6fz">CDNs with tracking</li> <li class="svelte-7ke6fz">Social media widgets</li></ul> <p>All assets (CSS, JS, fonts) are either <strong>self-hosted</strong> or loaded from privacy-respecting CDNs.</p> <h2 class="svelte-7ke6fz">4. Cookies &amp; Local Storage</h2> <p><strong>No cookies.</strong> No <code class="svelte-7ke6fz">localStorage</code> persistence. Your input is cleared on page reload or when you click “Clear”.</p> <h2 class="svelte-7ke6fz">5. Security Responsibility</h2> <p>While we don’t handle your data, we recommend:</p> <ul class="svelte-7ke6fz"><li class="svelte-7ke6fz">Use the tool in a secure browser (HTTPS only)</li> <li class="svelte-7ke6fz">Avoid pasting production tokens in public environments</li> <li class="svelte-7ke6fz">Keep your OS and browser updated</li></ul> <h2 class="svelte-7ke6fz">6. Children's Privacy</h2> <p>This tool is not directed at children under 13. We do not knowingly process data from minors.</p> <h2 class="svelte-7ke6fz">7. Global Compliance</h2> <p>Because <strong>no data is collected</strong>, we comply by default with:</p> <ul class="svelte-7ke6fz"><li class="svelte-7ke6fz"><strong>GDPR</strong> (EU)</li> <li class="svelte-7ke6fz"><strong>CCPA/CPRA</strong> (California)</li> <li class="svelte-7ke6fz"><strong>LGPD</strong> (Brazil)</li> <li class="svelte-7ke6fz"><strong>PIPEDA</strong> (Canada)</li></ul> <h2 class="svelte-7ke6fz">8. Updates to This Policy</h2> <p>We may revise this policy. Changes will be posted here with the updated effective date.</p> <h2 class="svelte-7ke6fz">9. Contact</h2> <p>Questions? Reach out via our <a href="https://github.com/axelbase/jwt-checker" target="_blank" rel="noopener" class="text-turquoise fw-semibold svelte-7ke6fz">GitHub repository</a>.</p> <p class="italic-note svelte-7ke6fz"><strong>Your tokens. Your browser. Your privacy. Guaranteed.</strong></p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container text-center"><p class="mb-0">© 2025 <strong>AxelBase JWT Checker</strong> — <a href="./privacy" class="footer-link">Privacy Policy</a> | <a href="./terms" class="footer-link">Terms &amp; Conditions</a></p></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1qxawfz = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/jwt-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.BhYHJnkG.js"),
+						import("./_app/immutable/entry/app.CmUmXQcf.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 11],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

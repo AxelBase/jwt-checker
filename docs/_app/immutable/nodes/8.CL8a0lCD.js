@@ -1,0 +1,30 @@
+import{f as y,a as m,w as M}from"../chunks/D6UAHUuG.js";import"../chunks/Cs9GcjWm.js";import{ai as t,ag as _,al as W,am as j,an as r,ak as e,aj as s}from"../chunks/TclhMj-f.js";import{h as C,s as a}from"../chunks/DcKmjBIS.js";import{b as l}from"../chunks/DhPEI8C9.js";const O=!0,S=Object.freeze(Object.defineProperty({__proto__:null,prerender:O},Symbol.toStringTag,{value:"Module"}));var N=M(y(`<meta name="description" content="Learn 3 easy ways to create valid, expired, or future-dated JWTs for testing — no server required."/> <meta name="robots" content="index, follow, max-snippet:-1"/> <link rel="canonical" href="https://axelbase.github.io/jwt-checker/blog/posts/post5"/> <meta property="og:title" content="How to Generate Test JWTs (Without a Backend) | AxelBase"/> <meta property="og:description" content="Step-by-step guide to crafting JWTs for development and debugging."/> <meta property="og:url" content="https://axelbase.github.io/jwt-checker/blog/posts/post5"/> <meta property="og:type" content="article"/> <meta property="article:published_time" content="2025-11-08"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Generate Test JWTs – No Backend"/> <meta name="twitter:description" content="Create valid, expired, or future tokens instantly."/> <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Generate Test JWTs (Without a Backend)",
+  "datePublished": "2025-11-08",
+  "author": { "@type": "Organization", "name": "AxelBase" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AxelBase",
+    "logo": { "@type": "ImageObject", "url": "{base}/AxelLab-Logo.ico" }
+  },
+  "image": "{base}/og-image.jpg",
+  "url": "https://axelbase.github.io/jwt-checker/blog/posts/post5",
+  "description": "Learn 3 easy ways to create valid, expired, or future-dated JWTs for testing — no server required."
+}
+<\/script>`,1)),A=y('<div class="container fade-in post-layout svelte-1li990r"><div class="breadcrumbs svelte-1li990r"><a class="svelte-1li990r">Home</a> <span>/</span> <a class="svelte-1li990r">Blog</a> <span>/</span> <p class="svelte-1li990r">Generate Test JWTs</p></div> <article class="prose svelte-1li990r"><h1 class="svelte-1li990r">How to Generate Test JWTs (Without a Backend)</h1> <p class="post-meta svelte-1li990r">Published: November 8, 2025</p> <p>Need a valid JWT for testing? Don’t spin up a Node.js server. Don’t hardcode secrets. Here are <strong>three zero-setup methods</strong> to generate tokens instantly.</p> <h2 class="svelte-1li990r">Method 1: Online JWT Generators (Use with Caution)</h2> <p>Tools like <a href="https://jwt.io" target="_blank" rel="noopener" class="text-turquoise svelte-1li990r">jwt.io</a> let you:</p> <ul class="svelte-1li990r"><li class="svelte-1li990r">Edit header and payload</li> <li class="svelte-1li990r">Set <code class="svelte-1li990r">iat</code> and <code class="svelte-1li990r">exp</code></li> <li class="svelte-1li990r">Sign with HS256 (use <code class="svelte-1li990r">secret</code> as key)</li></ul> <p><strong>Warning</strong>: Never paste real tokens. Use dummy data.</p> <h2 class="svelte-1li990r">Method 2: Browser Console (100% Local)</h2> <p>Open DevTools and run:</p> <pre class="svelte-1li990r"><code class="svelte-1li990r"></code></pre> <p>Copy the output → paste into <a class="text-turquoise fw-semibold svelte-1li990r">AxelBase Checker</a>.</p> <h2 class="svelte-1li990r">Method 3: AxelBase + Copy Re-encode</h2> <p>The smartest way:</p> <ol><li>Paste any JWT into <a class="text-turquoise fw-semibold svelte-1li990r">AxelBase</a></li> <li>Edit the decoded payload (e.g., change <code class="svelte-1li990r">exp</code>)</li> <li>Click <strong>“Copy Re-encoded JWT”</strong></li> <li>Use the new token instantly</li></ol> <p>No external tools. No risk. Full control.</p> <h2 class="svelte-1li990r">Pre-Made Test Tokens</h2> <p>Here are three ready-to-use examples:</p> <ul class="svelte-1li990r"><li class="svelte-1li990r"><strong>Valid</strong>: <code class="svelte-1li990r">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjI1NjAwMDAsImV4cCI6MTc2MjU2MzYwMH0.sig</code></li> <li class="svelte-1li990r"><strong>Expired</strong>: <code class="svelte-1li990r">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzM2ODMyMDAsImV4cCI6MTczMzY4NjgwMH0.sig</code></li> <li class="svelte-1li990r"><strong>Future</strong>: <code class="svelte-1li990r">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3OTk5OTk5OTksImV4cCI6MTgwMDAwMDAwMH0.sig</code></li></ul> <p>Paste any into our tool — see the status change live.</p> <h2 class="svelte-1li990r">Pro Tip</h2> <p>Use <code class="svelte-1li990r">iat: now - 600</code> and <code class="svelte-1li990r">exp: now + 3600</code> for realistic testing.</p> <p class="italic-note svelte-1li990r">Test fast. Stay secure. No backend needed.</p> <p class="mt-5"><a class="btn btn-outline-turquoise">Generate Test Token Now</a> <a class="btn btn-link text-turquoise ms-3 svelte-1li990r">Next: Common JWT Mistakes</a></p></article></div>');function $(b){var o=A();C("1li990r",J=>{var I=N();r(22),W(()=>{j.title="How to Generate Test JWTs (Without a Backend) | AxelBase"}),m(J,I)});var i=t(o),d=t(i),f=e(d,4);r(4),s(i);var g=e(i,2),n=e(t(g),18),w=t(n);w.textContent=`function makeJwt(claims) {
+  const header = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }))
+    .replace(/=/g,'').replace(/\\+/g,'-').replace(/\\//g,'_');
+  const payload = btoa(JSON.stringify(claims))
+    .replace(/=/g,'').replace(/\\+/g,'-').replace(/\\//g,'_');
+  return \`\${header}.\${payload}.sig\`;
+}
+
+// Valid (expires in 1 hour)
+console.log(makeJwt({
+  sub: "test",
+  iat: Math.floor(Date.now()/1000),
+  exp: Math.floor(Date.now()/1000) + 3600
+}));`,s(n);var c=e(n,2),T=e(t(c));r(),s(c);var p=e(c,6),v=t(p),k=e(t(v));s(v),r(6),s(p);var h=e(p,18),u=t(h),x=e(u,2);s(h),s(g),s(o),_(()=>{a(d,"href",`${l??""}/`),a(f,"href",`${l??""}/blog`),a(T,"href",`${l??""}/`),a(k,"href",`${l??""}/`),a(u,"href",`${l??""}/`),a(x,"href",`${l??""}/blog/posts/post6`)}),m(b,o)}export{$ as component,S as universal};
