@@ -96,8 +96,9 @@
     <div class="navbar-brand-group">
       <a href="{base}/" class="navbar-brand-link" aria-label="AxelBase Home">
         <img src="{base}/AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo" width="32" height="32" />
+        <p class="navbar-brand text-turquoise fw-bold">AxelBase</p>
       </a>
-      <a href="{base}/" class="navbar-brand text-turquoise fw-bold">AxelBase</a>
+
     </div>
 
     <ul class="nav-links">
@@ -157,8 +158,3 @@
     </p>
   </div>
 </footer>
-
-<!-- ==================== STYLES (optional) ==================== -->
-<style>
-  /* Keep if not in app.css */
-</style>
