@@ -4,8 +4,6 @@
   import { fly } from 'svelte/transition';
   import { onMount } from 'svelte';
 
-  const paypalUsername = 'AxelLab427';
-  const donationAmounts = [1, 3, 5, 10] as const;
   let isDropdownOpen = false;
 
   function toggleDropdown() {
@@ -97,7 +95,6 @@
       <a href="{base}/" class="navbar-brand-link" aria-label="AxelBase Home">
         <img src="{base}/AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo" width="32" height="32" />
       </a>
-
     </div>
 
     <ul class="nav-links">
@@ -107,34 +104,43 @@
       <li><a class="nav-link" href="{base}/#faq">FAQ</a></li>
       <li><a class="nav-link" href="{base}/blog">Blog</a></li>
 
-      <!-- Buy Me a Coffee Dropdown -->
+      <!-- Buy Me a Coffee Dropdown (File 1 style, adapted) -->
       <li class="bmac-nav-item" use:clickOutside on:click_outside={closeDropdown}>
         <button
-          class="bmac-button"
+          class="bmac-button-file1"
           on:click|preventDefault={toggleDropdown}
           aria-haspopup="true"
           aria-expanded={isDropdownOpen}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-            <path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z" />
           </svg>
-          Buy me a coffee
+          <span class="d-none d-sm-inline">Buy me a Coffee</span>
         </button>
 
         {#if isDropdownOpen}
-          <div class="bmac-dropdown" transition:fly={{ y: -10, duration: 250 }} role="menu">
-            {#each donationAmounts as amount}
-              <a
-                href="https://paypal.me/{paypalUsername}/{amount}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bmac-link"
-                on:click={closeDropdown}
-                role="menuitem"
-              >
-                ${amount}
-              </a>
-            {/each}
+          <div class="bmac-dropdown-file1" transition:fly={{ y: -10, duration: 250 }} role="menu">
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown}>
+              <span class="amount">$3</span> One Coffee
+            </a>
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown}>
+              <span class="amount">$5</span> Two Coffees
+            </a>
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown}>
+              <span class="amount">$10</span> Three Coffees
+            </a>
+
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown} class="custom-amount">
+              Custom Amount
+            </a>
+
+            <a
+              href="bitcoin:bc1q3p0e6vt492m4w4fpz5m2cl4zcfuqqkgaj6myc9?label=AxelBase&message=Buy%20me%20a%20coffee"
+              on:click={closeDropdown}
+              class="custom-amount"
+            >
+              Buy via Crypto (Bitcoin)
+            </a>
           </div>
         {/if}
       </li>
@@ -157,3 +163,82 @@
     </p>
   </div>
 </footer>
+
+<style>
+  /* All existing File 2 styles from static/app.css remain unchanged */
+  /* ... (your full app.css content here) ... */
+
+  /* === Buy Me a Coffee Styles from File 1 (preserved & adapted to turquoise theme) === */
+  .bmac-button-file1 {
+    background: var(--turquoise);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.25rem; /* larger padding for pill feel */
+    border-radius: 9999px; /* full pill shape */
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(26,188,156,0.3);
+  }
+
+  .bmac-button-file1:hover {
+    background: var(--turquoise-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26,188,156,0.4);
+  }
+
+  .bmac-button-file1 svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bmac-dropdown-file1 {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.75rem;
+    width: 240px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .bmac-dropdown-file1 a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.98rem;
+    transition: all 0.2s ease;
+  }
+
+  .bmac-dropdown-file1 a:hover {
+    background: rgba(26,188,156,0.1);
+    color: var(--turquoise);
+    padding-left: 28px;
+  }
+
+  .bmac-dropdown-file1 .amount {
+    font-weight: 700;
+    color: var(--turquoise);
+    font-size: 1.1rem;
+  }
+
+  .bmac-dropdown-file1 .custom-amount {
+    font-weight: 600;
+    color: var(--turquoise);
+    border-top: 1px solid var(--border);
+    justify-content: center !important;
+  }
+</style>
